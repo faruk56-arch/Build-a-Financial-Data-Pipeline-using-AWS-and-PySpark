@@ -19,4 +19,4 @@ jobs:
           git config --global user.email "github-actions@example.com"
           git config --global user.name "GitHub Actions"
           git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.com/faruk67/data-pipeline.git
-          git push --force gitlab main
+          git push --force gitlab master
