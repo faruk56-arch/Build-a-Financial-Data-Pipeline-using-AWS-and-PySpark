@@ -18,7 +18,6 @@ python main.py --run_ts "1999-01-09" --config '{"app_id" : "0a1bsfqsfq54143be301
 ```
 ```
 
-#new test
 ##### Docker Installation:
 #Update the packages on your instance
 sudo yum update -y
