@@ -1,0 +1,23 @@
+name: Push to GitLab
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  push_to_gitlab:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Push to GitLab
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+        run: |
+          git config --global user.email "github-actions@example.com"
+          git config --global user.name "GitHub Actions"
+          git remote add gitlab https://oauth2:${GITLAB_TOKEN}@https://gitlab.com/faruk67/data-pipeline.git
+          git push --force gitlab main
